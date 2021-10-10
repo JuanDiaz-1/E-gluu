@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_agregar_producto"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_editar_producto"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_eliminar_producto"
+            android:title="@string/menu_slideshow" />
+    </group>
+    <item android:title="Opciones adicionales">
+    <menu>
+        <item
+            android:id="@+id/nav_qr"
+            android:icon="@drawable/ic_escaner_qr"
+            android:title="Escanear código QR" />
+        <item
+            android:id="@+id/nav_map2"
+            android:icon="@drawable/ic_mapa_proveedores"
+            android:title="Buscar un Proveedor" />
+    </menu>
+</item>
+</menu>
