@@ -32,9 +32,4 @@
         android:name="mx.ita.navdrawer.nav_map"
         android:label="fragment_nav_map"
         tools:layout="@layout/fragment_nav_map" />
-    <fragment
-        android:id="@+id/nav_TerminosYCondiciones"
-        android:name="mx.ita.navdrawer.Nav_TerminosYCondiciones"
-        android:label="fragment_nav__terminos_y_condiciones"
-        tools:layout="@layout/fragment_nav__terminos_y_condiciones" />
 </navigation>
