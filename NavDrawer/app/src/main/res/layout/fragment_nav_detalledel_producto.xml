@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".nav_detalledelProducto">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbDetalles"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#0097A9"
+        app:popupTheme="@style/Theme.MaterialComponents.Light"
+        app:title="Detalles del producto"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="356dp"
+        android:layout_height="45dp"
+        android:background="@drawable/estilo_bordes"
+        android:fontFamily="sans-serif-black"
+        android:text="Articulo"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="291dp" />
+
+    <TextView
+        android:id="@+id/tVCodigo"
+        android:layout_width="384dp"
+        android:layout_height="43dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Codigo:"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:lineHeight="384sp"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="348dp" />
+
+    <TextView
+        android:id="@+id/tVDetalles"
+        android:layout_width="384dp"
+        android:layout_height="41dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Detalles:"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:lineHeight="384sp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="558dp" />
+
+    <TextView
+        android:id="@+id/tVPrecioV"
+        android:layout_width="384dp"
+        android:layout_height="42dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Precio Venta:"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:lineHeight="384sp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="516dp" />
+
+    <TextView
+        android:id="@+id/tVPrecioC"
+        android:layout_width="384dp"
+        android:layout_height="41dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Precio Compra:"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:lineHeight="384sp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="475dp" />
+
+    <TextView
+        android:id="@+id/tVNombre"
+        android:layout_width="384dp"
+        android:layout_height="42dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Nombre:"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:lineHeight="384sp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="391dp" />
+
+    <TextView
+        android:id="@+id/tVStock"
+        android:layout_width="383dp"
+        android:layout_height="40dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Stock:"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:lineHeight="384sp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="434dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="295dp"
+        android:layout_height="221dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        tools:layout_editor_absoluteX="58dp"
+        tools:src="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
