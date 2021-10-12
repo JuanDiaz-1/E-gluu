@@ -31,4 +31,8 @@
     <string name="incia_sesion">Inicia sesión</string>
     <string name="yaregistrado">¿Ya estas registrado?</string>
     <string name="terminosycondiciones">"Ver terminos y condiciones "</string>
+
+    <!--   Strings de Memo  -->
+    <string name="btnCamara">Camara</string>
+
 </resources>
