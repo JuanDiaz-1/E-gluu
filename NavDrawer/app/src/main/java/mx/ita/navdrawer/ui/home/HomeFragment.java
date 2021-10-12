@@ -37,9 +37,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 new ViewModelProvider(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         /*final TextView textView = root.findViewById(R.id.text_home);*/
-          mListView = root.findViewById(R.id.listview);
+          /*mListView = root.findViewById(R.id.listview);
           mBtnAgregar = root.findViewById(R.id.btnlist);
-          mEditText = root.findViewById(R.id.edlista);
+          mEditText = root.findViewById(R.id.edlista);*/
       /*  homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
@@ -56,7 +56,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btnlist: String texto = mEditText.getText().toString().trim();
+            case R.id.buttonAgregar: String texto = mEditText.getText().toString().trim();
                 mLista.add(texto);
                 mEditText.getText().clear();
                 ArrayAdapter mAdapter  = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,mLista);

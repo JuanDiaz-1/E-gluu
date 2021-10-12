@@ -32,4 +32,18 @@
     <string name="incia_sesion">Inicia sesión</string>
     <string name="yaregistrado">¿Ya estas registrado?</string>
     <string name="terminosycondiciones">"Ver terminos y condiciones "</string>
+
+    <!-- Strings Agregar-->
+    <string name="appagregar">Agregar Producto</string>
+    <string name="codigo">Codigo QR:</string>
+    <string name="nombreproducto">Nombre del producto:</string>
+    <string name="detalles">Detalles del producto:</string>
+    <string name="stock">Stock:</string>
+    <string name="preciocompa">Precio Compra:</string>
+    <string name="precioventa">Precio Venta:</string>
+    <string name="agregar">AGREGAR</string>
+
+    <!-- Strings Eliminar-->
+    <string name="appeliminar">Eliminar Producto</string>
+    <string name="detalleselimnar">Presione el boton para escanear el codigo QR del producto </string>
 </resources>

@@ -6,33 +6,139 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-   <EditText
-       android:id="@+id/edlista"
-       android:layout_width="match_parent"
-       android:layout_height="45dp"
-
-       android:hint="Nombre del Producto"
-       app:layout_constraintBottom_toBottomOf="parent"
+   <com.google.android.material.appbar.AppBarLayout
+       android:id="@+id/appBar"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:background="#0097A9"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toTopOf="parent"
-       app:layout_constraintVertical_bias="0.236"
-       tools:ignore="MissingConstraints"
-       tools:layout_editor_absoluteX="-16dp" />
+       tools:ignore="MissingConstraints">
+
+      <androidx.appcompat.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          android:background="#0097A9"
+          android:gravity="center_horizontal"
+          android:textAlignment="center"
+          app:popupTheme="@style/Theme.MaterialComponents.Light"
+          app:title="@string/appagregar"
+          app:titleTextColor="@color/white" />
+
+   </com.google.android.material.appbar.AppBarLayout>
+
+   <EditText
+       android:id="@+id/CodigoProducto"
+       android:layout_width="363dp"
+       android:layout_height="46dp"
+       android:ems="10"
+       android:gravity="center_horizontal"
+       android:hint="@string/codigo"
+       android:inputType="textPersonName"
+       android:text=""
+       android:textAlignment="center"
+       app:layout_constraintBottom_toTopOf="@+id/NombreProducto"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/appBar"
+       android:scaleType="centerInside"/>
+
+   <EditText
+       android:id="@+id/NombreProducto"
+       android:layout_width="367dp"
+       android:layout_height="44dp"
+       android:ems="10"
+       android:gravity="center_horizontal"
+       android:hint="@string/nombreproducto"
+       android:inputType="textPersonName"
+       android:text=""
+       android:textAlignment="center"
+       app:layout_constraintBottom_toTopOf="@+id/Detallesproducto"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/CodigoProducto" />
+
+   <EditText
+       android:id="@+id/Detallesproducto"
+       android:layout_width="364dp"
+       android:layout_height="55dp"
+       android:ems="10"
+       android:gravity="center_horizontal"
+       android:hint="@string/detalles"
+
+       android:inputType="textPersonName"
+       android:text=""
+       android:textAlignment="center"
+       app:layout_constraintBottom_toTopOf="@+id/StockProducto"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/NombreProducto" />
+
+   <EditText
+       android:id="@+id/StockProducto"
+       android:layout_width="363dp"
+       android:layout_height="46dp"
+       android:ems="10"
+       android:gravity="center_horizontal"
+       android:hint="@string/stock"
+       android:inputType="textPersonName"
+       android:text=""
+       android:textAlignment="center"
+       app:layout_constraintBottom_toTopOf="@+id/PrecioCompra"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/Detallesproducto" />
+
+   <EditText
+       android:id="@+id/PrecioCompra"
+       android:layout_width="372dp"
+       android:layout_height="48dp"
+       android:ems="10"
+       android:gravity="center_horizontal"
+       android:hint="@string/preciocompa"
+       android:inputType="textPersonName"
+       android:text=""
+       android:textAlignment="center"
+       app:layout_constraintBottom_toTopOf="@+id/PrecioVenta"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/StockProducto" />
+
+   <EditText
+       android:id="@+id/PrecioVenta"
+       android:layout_width="367dp"
+       android:layout_height="46dp"
+       android:ems="10"
+       android:gravity="center_horizontal"
+       android:hint="@string/precioventa"
+       android:inputType="textPersonName"
+       android:text=""
+       android:textAlignment="center"
+       app:layout_constraintBottom_toTopOf="@+id/buttonAgregar"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/PrecioCompra" />
 
    <Button
-       android:id="@+id/btnlist"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="Agregar producto"
-       app:layout_constraintTop_toBottomOf="@+id/edlista"
-       tools:ignore="MissingConstraints"
-       tools:layout_editor_absoluteX="0dp" />
-
-
-   <ListView
-       android:id="@+id/listview"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       app:layout_constraintTop_toBottomOf="@+id/edlista" />
+       android:id="@+id/buttonAgregar"
+       android:layout_width="362dp"
+       android:layout_height="48dp"
+       android:text="@string/agregar"
+       app:backgroundTint="#7D858E"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.448"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/PrecioVenta"
+       app:layout_constraintVertical_bias="0.183" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
