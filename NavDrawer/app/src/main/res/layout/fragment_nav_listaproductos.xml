@@ -7,7 +7,7 @@
 
     tools:context=".nav_detalledelProducto">
 
-S
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tbDetalles"
         android:layout_width="match_parent"
