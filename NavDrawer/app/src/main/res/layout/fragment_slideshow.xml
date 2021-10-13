@@ -37,7 +37,7 @@
         android:layout_height="57dp"
         android:ems="10"
         android:gravity="center_horizontal"
-        android:hint="@string/codigo"
+        android:hint="Código"
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/button2"
