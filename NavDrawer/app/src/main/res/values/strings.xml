@@ -33,11 +33,6 @@
     <string name="yaregistrado">¿Ya estas registrado?</string>
     <string name="terminosycondiciones">"Ver terminos y condiciones "</string>
 
-
-    <!--   Strings de Memo  -->
-    <string name="btnCamara">Camara</string>
-
-
     <!-- Strings Agregar-->
     <string name="appagregar">Agregar Producto</string>
     <string name="codigo">Codigo QR:</string>
@@ -51,5 +46,4 @@
     <!-- Strings Eliminar-->
     <string name="appeliminar">Eliminar Producto</string>
     <string name="detalleselimnar">Presione el boton para escanear el codigo QR del producto </string>
-
 </resources>
