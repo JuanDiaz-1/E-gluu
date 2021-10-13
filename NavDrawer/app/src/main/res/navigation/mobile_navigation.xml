@@ -32,9 +32,20 @@
         android:name="mx.ita.navdrawer.nav_map"
         android:label="fragment_nav_map"
         tools:layout="@layout/fragment_nav_map" />
+
     <fragment
         android:id="@+id/nav_Camera"
         android:name="mx.ita.navdrawer.nav_Camera"
         android:label="fragment_nav__camera"
         tools:layout="@layout/fragment_nav__camera" />
+
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/nav_detalledelProducto">
+        <fragment
+            android:id="@+id/nav_detalledelProducto"
+            android:name="mx.ita.navdrawer.nav_detalledelProducto"
+            android:label="fragment_nav_detalledel_producto"
+            tools:layout="@layout/fragment_nav_detalledel_producto" />
+    </navigation>
+
 </navigation>

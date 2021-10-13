@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">E - Gluu</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -32,7 +33,23 @@
     <string name="yaregistrado">¿Ya estas registrado?</string>
     <string name="terminosycondiciones">"Ver terminos y condiciones "</string>
 
+
     <!--   Strings de Memo  -->
     <string name="btnCamara">Camara</string>
+
+
+    <!-- Strings Agregar-->
+    <string name="appagregar">Agregar Producto</string>
+    <string name="codigo">Codigo QR:</string>
+    <string name="nombreproducto">Nombre del producto:</string>
+    <string name="detalles">Detalles del producto:</string>
+    <string name="stock">Stock:</string>
+    <string name="preciocompa">Precio Compra:</string>
+    <string name="precioventa">Precio Venta:</string>
+    <string name="agregar">AGREGAR</string>
+
+    <!-- Strings Eliminar-->
+    <string name="appeliminar">Eliminar Producto</string>
+    <string name="detalleselimnar">Presione el boton para escanear el codigo QR del producto </string>
 
 </resources>
