@@ -45,4 +45,9 @@
         android:name="mx.ita.navdrawer.nav_listp"
         android:label="fragment_nav_listp"
         tools:layout="@layout/fragment_nav_listp" />
+    <fragment
+        android:id="@+id/nav_detalles"
+        android:name="mx.ita.navdrawer.nav_detalles"
+        android:label="fragment_nav_detalles"
+        tools:layout="@layout/fragment_nav_detalles" />
 </navigation>
