@@ -16,6 +16,10 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_eliminar_producto"
             android:title="@string/menu_slideshow" />
+        <item
+            android:id="@+id/"
+            android:icon="@drawable/ic_list_productos"
+            android:title="Lista de productos" />
     </group>
     <item android:title="Opciones adicionales">
     <menu>
