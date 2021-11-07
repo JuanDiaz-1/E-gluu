@@ -39,7 +39,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="268dp"
             android:layout_marginRight="30dp"
-            android:hint="@string/email"
+            android:hint="@string/correo_electronico"
             android:textColorHint="#1F2D3D"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,6 +48,7 @@
 
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/correoelectronico"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#1F2D3D" />
