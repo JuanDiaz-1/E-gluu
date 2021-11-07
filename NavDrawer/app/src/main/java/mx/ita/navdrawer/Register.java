@@ -18,7 +18,7 @@ public class Register extends Activity {
         Intent intent = new Intent();
         switch(view.getId()){
             case R.id.btnRegistro:
-                miIntent=new Intent(Register.this,MainActivity.class);
+                miIntent=new Intent(Register.this,Login.class);
                 break;
             case R.id.loginText:
                 miIntent=new Intent(Register.this,Login.class);
