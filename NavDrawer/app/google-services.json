@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "105168874609",
+    "project_id": "e-gluu",
+    "storage_bucket": "e-gluu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105168874609:android:b0459eb5c983964b2e3fd0",
+        "android_client_info": {
+          "package_name": "mx.ita.navdrawer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105168874609-0b2im7ktri3fqlmo7khbnohspinn0267.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.ita.navdrawer",
+            "certificate_hash": "e315c90f62eb6e88b7ff35cdbbdb67d0c7c6e158"
+          }
+        },
+        {
+          "client_id": "105168874609-qceh5s591vhnccqudrpgma73bv44do3j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJWBMAJR10anoO6lyBIyWd7LN5clgB0a4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105168874609-qceh5s591vhnccqudrpgma73bv44do3j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
