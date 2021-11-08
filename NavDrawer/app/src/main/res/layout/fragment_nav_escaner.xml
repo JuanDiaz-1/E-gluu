@@ -10,9 +10,7 @@
         android:id="@+id/appBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="186dp"
         android:background="#0097A9"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,35 +24,42 @@
             android:gravity="center_horizontal"
             android:textAlignment="center"
             app:popupTheme="@style/Theme.MaterialComponents.Light"
-            app:title="Scanear Código QR"
+            app:title="Scanear Código de barras"
             app:titleTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="154dp"
-        android:layout_height="119dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginRight="96dp"
-        android:background="@drawable/ic_baseline_camera_alt_24"
-        android:text=""
-        app:backgroundTint="#47525E"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        tools:ignore="SpeakableTextPresentCheck" />
+        android:id="@+id/bt_Scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Activar Scanner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="359dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="446dp"
-        android:gravity="center_horizontal"
-        android:text="@string/detalleselimnar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Presione el boton para activar el scanner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBar" />
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/vtCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="El codígo escaneado se mostrará aqui"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_Scan" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
