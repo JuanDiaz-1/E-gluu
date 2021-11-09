@@ -53,4 +53,5 @@
     <!-- Strings Eliminar-->
     <string name="appeliminar">Eliminar Producto</string>
     <string name="detalleselimnar">"Presione el boton para escanear el codigo de barras del producto "</string>
+    <string name="cerrarsesion">Cerrar sesión</string>
 </resources>
