@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".nav_map">
+
+
+    <Button
+        android:id="@+id/btnPrueba"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="182dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="244dp"
+        android:text="Abrir Google Maps"></Button>
+
+    <TextView
+        android:id="@+id/txtmap"
+        android:layout_width="283dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPrueba"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="193dp"
+        android:layout_marginEnd="207dp"
+        android:layout_marginBottom="-70dp"
+        android:text="Presione el boton para iniciar Google Maps" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="243dp"
+        android:layout_height="110dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="212dp"
+        android:layout_marginEnd="228dp"
+        android:layout_marginBottom="92dp"
+        android:src="@drawable/map_truck" />
+
+
+</RelativeLayout>
