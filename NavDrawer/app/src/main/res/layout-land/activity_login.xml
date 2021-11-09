@@ -97,7 +97,7 @@
             android:id="@+id/loginTextInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="200dp"
+            android:layout_marginLeft="205dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="96dp"
             android:text="@string/aun_no_tienes_cuenta"
