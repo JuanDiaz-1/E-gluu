@@ -9,7 +9,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.app.Notification;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -19,9 +30,15 @@ import androidx.lifecycle.ViewModelProvider;
 import java.util.ArrayList;
 import java.util.List;
 
+import mx.ita.navdrawer.Producto;
 import mx.ita.navdrawer.R;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
+    EditText codigoproducto,nombreproducto,detallesproducto,stock,preciocompra,precioventa;
+    Button botonagregar;
+
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
 
     private HomeViewModel homeViewModel;
     private Button mBtnAgregar;
@@ -36,22 +53,89 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        /*final TextView textView = root.findViewById(R.id.text_home);*/
-          /*mListView = root.findViewById(R.id.listview);
-          mBtnAgregar = root.findViewById(R.id.btnlist);
-          mEditText = root.findViewById(R.id.edlista);*/
-      /*  homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+
+        codigoproducto=root.findViewById(R.id.CodigoProducto);
+        nombreproducto=root.findViewById(R.id.NombreProducto);
+        detallesproducto=root.findViewById(R.id.Detallesproducto);
+        stock=root.findViewById(R.id.StockProducto);
+        preciocompra=root.findViewById(R.id.PrecioCompra);
+        precioventa=root.findViewById(R.id.PrecioVenta);
+
+        inicializarfirebase();
+
+        botonagregar=root.findViewById(R.id.buttonAgregar);
+        botonagregar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onChanged(@Nullable String s) {
-                mEditText.setText(s);
+            public void onClick(View v) {
+                String codigo=codigoproducto.getText().toString();
+                String nombre=nombreproducto.getText().toString();
+                String detalles=detallesproducto.getText().toString();
+                String stoc=stock.getText().toString();
+                String precioc=preciocompra.getText().toString();
+                String preciov=precioventa.getText().toString();
+                if(codigo.equals("") || nombre.equals("") || detalles.equals("") || stoc.equals("") || precioc.equals("") || preciov.equals("")){
+                    validacion();
+                }else{
+                    Producto p=new Producto();
+                    p.setCodigoprodcuto(codigo);
+                    p.setNombreproducto(nombre);
+                    p.setDetallesproducto(detalles);
+                    p.setStock(stoc);
+                    p.setPreciocompra(precioc);
+                    p.setPrecioventa(preciov);
+                    databaseReference.child("Producto").child(p.getCodigoprodcuto()).setValue(p);
+                    limpiarcajas();
+
+                }
             }
-        });*/
+        });
+
 
         return root;
 
 
 
     }
+    private void inicializarfirebase(){
+//        FirebaseApp.initializeApp(this);
+        firebaseDatabase= FirebaseDatabase.getInstance();
+        databaseReference= firebaseDatabase.getReference();
+    }
+    private void validacion() {
+        String codigo=codigoproducto.getText().toString();
+        String nombre=nombreproducto.getText().toString();
+        String detalles=detallesproducto.getText().toString();
+        String stoc=stock.getText().toString();
+        String precioc=preciocompra.getText().toString();
+        String preciov=precioventa.getText().toString();
+        if(codigo.equals("")){
+            codigoproducto.setError("Required");
+        }
+        if(nombre.equals("")){
+            nombreproducto.setError("Required");
+        }
+        if(detalles.equals("")){
+            detallesproducto.setError("Required");
+        }
+        if(stoc.equals("")){
+            stock.setError("Required");
+        }
+        if(precioc.equals("")){
+            preciocompra.setError("Required");
+        }
+        if(preciov.equals("")){
+            precioventa.setError("Required");
+        }
+    }
+    private void limpiarcajas(){
+        codigoproducto.setText("");
+        nombreproducto.setText("");
+        detallesproducto.setText("");
+        stock.setText("");
+        preciocompra.setText("");
+        precioventa.setText("");
+    }
+
 
     @Override
     public void onClick(View v) {
