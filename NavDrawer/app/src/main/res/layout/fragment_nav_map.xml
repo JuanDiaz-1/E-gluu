@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".nav_map">
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/google_map"
-        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+
+    <Button
+        android:id="@+id/btnPrueba"
+        android:layout_width="wrap_content"
+        android:layout_height="82dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="101dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="428dp"
+        android:text="Abrir Google Maps"></Button>
+
+    <TextView
+        android:id="@+id/txtmap"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPrueba"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="133dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="12dp"
+        android:text="Presione el boton para iniciar Google Maps" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="245dp"
+        android:layout_height="307dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="93dp"
+        android:src="@drawable/map_truck" />
 
 
 </RelativeLayout>

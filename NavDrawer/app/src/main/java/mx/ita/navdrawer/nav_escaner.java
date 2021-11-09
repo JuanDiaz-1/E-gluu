@@ -1,5 +1,6 @@
 package mx.ita.navdrawer;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,14 +8,19 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link nav_escaner#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class nav_escaner extends Fragment {
-
+    Button btScan;
+    TextView tvCodigo;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -59,6 +65,41 @@ public class nav_escaner extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nav_escaner, container, false);
+        View view = inflater.inflate(R.layout.fragment_nav_escaner, container, false);
+        // Inflate the layout for this fragment
+        tvCodigo = view.findViewById(R.id.vtCodigo);
+        btScan = view.findViewById(R.id.bt_Scan);
+        btScan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                escanear();
+            }
+        });
+        return view;
+    }
+    public void escanear() {
+
+        IntentIntegrator intent = IntentIntegrator.forSupportFragment(nav_escaner.this);
+        //IntentIntegrator intent = new IntentIntegrator(getActivity());
+        intent.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES);
+        intent.setPrompt("ESCANEAR CODIGO");
+        intent.setCameraId(0);
+        intent.setBeepEnabled(false);
+        intent.setBarcodeImageEnabled(false);
+        intent.initiateScan();
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+
+        if(result != null) {
+            if(result.getContents() == null) {
+                Toast.makeText(getContext(), "Cancelaste el escaneo", Toast.LENGTH_SHORT).show();
+            } else {
+                tvCodigo.setText("El código del articulo es: "+ result.getContents().toString());
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 }
