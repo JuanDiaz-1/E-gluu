@@ -7,8 +7,47 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class nav_detalles extends Fragment {
+    TextView text;
+    EditText codigo;
+    Button btn;
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
+    Producto productoencontrado;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -54,6 +93,40 @@ public class nav_detalles extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nav_detalles, container, false);
+        View root = inflater.inflate(R.layout.fragment_nav_detalles, container, false);
+
+        codigo=root.findViewById(R.id.buscarcodigo);
+        btn=root.findViewById(R.id.butonbuscar);
+        text=root.findViewById(R.id.Datos);
+        inicializarfirebase();
+        String id=codigo.getText().toString();
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                databaseReference.child("Producto").child(id).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        if(!task.isSuccessful()){
+                            text.setText("ERROR");
+                        }
+                        else{
+                            String variable=String.valueOf(task.getResult().getValue());
+                            text.setText(variable);
+                        }
+                    }
+                });
+            }
+        });
+
+
+
+        return root;
     }
-}
+        private void inicializarfirebase(){
+            FirebaseApp.initializeApp(getActivity());
+            firebaseDatabase= FirebaseDatabase.getInstance();
+            //firebaseDatabase.setPersistenceEnabled(true);
+            databaseReference= firebaseDatabase.getReference();
+        }
+    }
