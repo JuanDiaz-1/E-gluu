@@ -7,6 +7,37 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.app.Activity;
+import android.app.Notification;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+import androidx.annotation.Nullable;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +45,15 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class nav_listp extends Fragment {
+
+    private List<Producto> listproducto=new ArrayList<Producto>();
+    ArrayAdapter<Producto> arrayAdapterProdcuto;
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
+    ListView listView;
+    Producto productoseleccionado;
+    EditText n,d,s,p1,p2;
+    String v1,v2,v3,v4,v5;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +99,38 @@ public class nav_listp extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nav_listp, container, false);
+         View root = inflater.inflate(R.layout.fragment_nav_listp, container, false);
+
+        listView=root.findViewById(R.id.listviewproducto);
+
+        inicializarfirebase();
+        listaDatos();
+
+        return root;
+                }
+    private void inicializarfirebase(){
+        FirebaseApp.initializeApp(getActivity());
+        firebaseDatabase= FirebaseDatabase.getInstance();
+        //firebaseDatabase.setPersistenceEnabled(true);
+        databaseReference= firebaseDatabase.getReference();
     }
-}
+    private void listaDatos() {
+        databaseReference.child("Producto").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                listproducto.clear();
+                for(DataSnapshot objSnapshot : snapshot.getChildren()){
+                    Producto p=objSnapshot.getValue(Producto.class);
+                    listproducto.add(p);
+                    arrayAdapterProdcuto =new ArrayAdapter<Producto>(getContext(), android.R.layout.simple_list_item_1,listproducto);
+                    listView.setAdapter(arrayAdapterProdcuto);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+                }

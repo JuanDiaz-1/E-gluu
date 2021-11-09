@@ -33,7 +33,7 @@ import java.util.List;
 import mx.ita.navdrawer.Producto;
 import mx.ita.navdrawer.R;
 
-public class HomeFragment extends Fragment implements View.OnClickListener {
+public class HomeFragment extends Fragment {
     EditText codigoproducto,nombreproducto,detallesproducto,stock,preciocompra,precioventa;
     Button botonagregar;
 
@@ -97,7 +97,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     }
     private void inicializarfirebase(){
-//        FirebaseApp.initializeApp(this);
+      FirebaseApp.initializeApp(getActivity());
         firebaseDatabase= FirebaseDatabase.getInstance();
         databaseReference= firebaseDatabase.getReference();
     }
@@ -136,15 +136,4 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         precioventa.setText("");
     }
 
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.buttonAgregar: String texto = mEditText.getText().toString().trim();
-                mLista.add(texto);
-                mEditText.getText().clear();
-                ArrayAdapter mAdapter  = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,mLista);
-                mListView.setAdapter(mAdapter);
-        }
-    }
 }
