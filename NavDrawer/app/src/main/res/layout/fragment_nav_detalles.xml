@@ -6,75 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".nav_detalles">
 
-    <TextView
-        android:id="@+id/textView11"
+    <EditText
+        android:id="@+id/buscarcodigo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView2"
-        android:layout_marginTop="78dp"
-        android:gravity="center"
-        android:text="Nombre del producto: Producto 1"
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView2"
-        android:layout_marginTop="206dp"
-        android:gravity="center"
-        android:text="Precio: $60"
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView2"
-        android:layout_marginTop="28dp"
-        android:gravity="center"
-        android:text="Código del producto: 1"
-        android:textSize="20dp" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="156dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="141dp"
-        android:layout_marginLeft="141dp"
-        android:layout_marginEnd="142dp"
-        android:layout_marginRight="142dp"
-        app:srcCompat="@drawable/ice_cream_cup1" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView2"
-        android:layout_marginTop="150dp"
-        android:gravity="center"
-        android:text="Cantidad: 15"
-        android:textSize="20dp" />
+        android:layout_above="@+id/butonbuscar"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:hint="Ingresa codigo del productoo"
+        android:inputType="textPersonName" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="154dp"
-        android:layout_height="119dp"
-        android:layout_below="@+id/textView12"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="53dp"
-        android:layout_marginEnd="131dp"
-        android:layout_marginRight="131dp"
-        android:background="@drawable/ic_baseline_camera_alt_24"
-        android:text=""
-        app:backgroundTint="#47525E"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        tools:ignore="SpeakableTextPresentCheck" />
+        android:id="@+id/butonbuscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="413dp"
+        android:text="Buscar"/>
 
+    <TextView
+        android:id="@+id/Datos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buscarcodigo"
+        android:layout_marginBottom="11dp"
+        android:text="Aqui aparecerá el texto "
+        android:textSize="24sp" />
 
 </RelativeLayout>
