@@ -22,16 +22,18 @@
         android:name="mx.ita.navdrawer.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
     <fragment
         android:id="@+id/nav_qr"
         android:name="mx.ita.navdrawer.nav_escaner"
-        android:label="fragment_nav_escaner"
+        android:label="@string/menu_scanner"
         tools:layout="@layout/fragment_nav_escaner" />
     <fragment
         android:id="@+id/nav_map2"
         android:name="mx.ita.navdrawer.nav_map"
-        android:label="fragment_nav_map"
+        android:label="@string/menu_map"
         tools:layout="@layout/fragment_nav_map" />
+
     <navigation android:id="@+id/navigation"
         app:startDestination="@id/nav_detalledelProducto">
         <fragment
@@ -43,16 +45,16 @@
     <fragment
         android:id="@+id/nav_listp"
         android:name="mx.ita.navdrawer.nav_listp"
-        android:label="fragment_nav_listp"
+        android:label="@string/menu_lista"
         tools:layout="@layout/fragment_nav_listp" />
     <fragment
         android:id="@+id/nav_detalles"
         android:name="mx.ita.navdrawer.nav_detalles"
-        android:label="fragment_nav_detalles"
+        android:label="@string/menu_detalles"
         tools:layout="@layout/fragment_nav_detalles" />
     <fragment
         android:id="@+id/nav_terminos"
         android:name="mx.ita.navdrawer.nav_terminos"
-        android:label="fragment_nav_terminos"
+        android:label="@string/menu_terminos"
         tools:layout="@layout/fragment_nav_terminos" />
 </navigation>

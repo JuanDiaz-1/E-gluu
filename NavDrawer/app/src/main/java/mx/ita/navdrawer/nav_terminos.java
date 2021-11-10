@@ -60,6 +60,7 @@ public class nav_terminos extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
+        getActivity().setTitle("Términos y condiciones");
                 View view = inflater.inflate(R.layout.fragment_nav_terminos, container, false);
         return view;
     }

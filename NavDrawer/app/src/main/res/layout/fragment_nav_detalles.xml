@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/buscarcodigo"
         android:layout_marginBottom="343dp"
-        android:hint=""
+        android:hint="@string/up_nombrep"
         android:inputType="textPersonName" />
 
     <EditText
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/buscarcodigo"
         android:layout_marginBottom="335dp"
-        android:hint=""
+        android:hint="@string/up_detallepro"
         android:inputType="textPersonName" />
 
     <EditText
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/buscarcodigo"
         android:layout_marginBottom="287dp"
-        android:hint=""
+        android:hint="@string/up_preciocompra"
         android:inputType="textPersonName" />
 
     <EditText
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/buscarcodigo"
         android:layout_marginBottom="242dp"
-        android:hint=""
+        android:hint="@string/up_precioventa"
         android:inputType="textPersonName" />
 
     <EditText
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/buscarcodigo"
         android:layout_marginBottom="183dp"
-        android:hint=""
+        android:hint="@string/up_stock"
         android:inputType="textPersonName" />
 
     <Button
@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/buscarcodigo"
         android:layout_marginBottom="396dp"
-        android:text="Aqui aparecerá el texto "
+        android:text=""
         android:textSize="24sp" />
 
 </RelativeLayout>

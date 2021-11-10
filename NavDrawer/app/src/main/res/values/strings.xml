@@ -54,4 +54,14 @@
     <string name="appeliminar">Eliminar Producto</string>
     <string name="detalleselimnar">"Presione el boton para escanear el codigo de barras del producto "</string>
     <string name="cerrarsesion">Cerrar sesión</string>
+    <string name="menu_scanner">Escáner</string>
+    <string name="menu_map">Buscar proveedor</string>
+    <string name="menu_lista">Lista de productos</string>
+    <string name="menu_detalles">Buscar Producto</string>
+    <string name="menu_terminos">Términos y condiciones</string>
+    <string name="up_nombrep">Nombre del producto</string>
+    <string name="up_detallepro">Detalles del producto</string>
+    <string name="up_preciocompra">Precio compra</string>
+    <string name="up_precioventa">Precio venta</string>
+    <string name="up_stock">Existencias</string>
 </resources>

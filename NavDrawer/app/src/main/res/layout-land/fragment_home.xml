@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+   <com.google.android.material.appbar.AppBarLayout
+       android:id="@+id/appBar"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:background="#0097A9"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       tools:ignore="MissingConstraints">
+
+      <androidx.appcompat.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          android:background="#0097A9"
+          android:gravity="center_horizontal"
+          android:textAlignment="center"
+          app:popupTheme="@style/Theme.MaterialComponents.Light"
+          app:title="@string/appagregar"
+          app:titleTextColor="@color/white" />
+
+   </com.google.android.material.appbar.AppBarLayout>
+
+   <EditText
+       android:id="@+id/CodigoProducto"
+       android:layout_width="363dp"
+       android:layout_height="46dp"
+       android:layout_marginStart="8dp"
+       android:layout_marginEnd="32dp"
+       android:layout_marginBottom="24dp"
+       android:ems="10"
+       android:gravity="center_horizontal"
+       android:hint="@string/codigo"
+       android:inputType="textPersonName"
+       android:scaleType="centerInside"
+       android:text=""
+       android:textAlignment="center"
+       app:layout_constraintBottom_toTopOf="@+id/buttonAgregar"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.571"
+       app:layout_constraintStart_toEndOf="@+id/Detallesproducto" />
+
+   <EditText
+       android:id="@+id/NombreProducto"
+       android:layout_width="208dp"
+       android:layout_height="43dp"
+       android:layout_marginBottom="8dp"
+       android:ems="10"
+       android:gravity="center_horizontal"
+       android:hint="@string/nombreproducto"
+       android:inputType="textPersonName"
+       android:text=""
+       android:textAlignment="center"
+       app:layout_constraintBottom_toTopOf="@+id/Detallesproducto"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.044"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/appBar" />
+
+   <EditText
+       android:id="@+id/Detallesproducto"
+       android:layout_width="208dp"
+       android:layout_height="50dp"
+       android:layout_marginBottom="8dp"
+       android:ems="10"
+       android:gravity="center_horizontal"
+       android:hint="@string/detalles"
+       android:inputType="textPersonName"
+       android:text=""
+       android:textAlignment="center"
+       app:layout_constraintBottom_toTopOf="@+id/StockProducto"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.049"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/NombreProducto" />
+
+   <EditText
+       android:id="@+id/StockProducto"
+       android:layout_width="206dp"
+       android:layout_height="44dp"
+       android:layout_marginBottom="8dp"
+       android:ems="10"
+       android:gravity="center_horizontal"
+       android:hint="@string/stock"
+       android:inputType="textPersonName"
+       android:text=""
+       android:textAlignment="center"
+       app:layout_constraintBottom_toTopOf="@+id/PrecioCompra"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.049"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/Detallesproducto" />
+
+   <EditText
+       android:id="@+id/PrecioCompra"
+       android:layout_width="209dp"
+       android:layout_height="39dp"
+       android:layout_marginTop="16dp"
+       android:ems="10"
+       android:gravity="center_horizontal"
+       android:hint="@string/preciocompa"
+       android:inputType="textPersonName"
+       android:text=""
+       android:textAlignment="center"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.048"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/StockProducto" />
+
+   <EditText
+       android:id="@+id/PrecioVenta"
+       android:layout_width="210dp"
+       android:layout_height="42dp"
+       android:layout_marginTop="24dp"
+       android:layout_marginBottom="32dp"
+       android:ems="10"
+       android:gravity="center_horizontal"
+       android:hint="@string/precioventa"
+       android:inputType="textPersonName"
+       android:text=""
+       android:textAlignment="center"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.044"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/PrecioCompra" />
+
+   <Button
+       android:id="@+id/buttonAgregar"
+       android:layout_width="362dp"
+       android:layout_height="48dp"
+       android:layout_marginEnd="52dp"
+       android:layout_marginBottom="64dp"
+       android:text="@string/agregar"
+       app:backgroundTint="#7D858E"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

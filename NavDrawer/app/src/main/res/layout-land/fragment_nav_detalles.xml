@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".nav_detalles">
+
+    <EditText
+        android:id="@+id/buscarcodigo"
+        android:layout_width="179dp"
+        android:layout_height="47dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="236dp"
+        android:ems="10"
+        android:hint="Ingresa codigo del producto"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/butonbuscar"
+        android:layout_width="172dp"
+        android:layout_height="41dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="16dp"
+        android:text="Buscar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buscarcodigo"
+        app:layout_constraintVertical_bias="0.127" />
+
+    <EditText
+        android:id="@+id/editdetallesproducto"
+        android:layout_width="194dp"
+        android:layout_height="41dp"
+        android:layout_alignBottom="@+id/buscarcodigo"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="244dp"
+        android:hint="@string/up_detallepro"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editnombreproducto" />
+
+    <EditText
+        android:id="@+id/editnombreproducto"
+        android:layout_width="194dp"
+        android:layout_height="41dp"
+        android:layout_above="@+id/buscarcodigo"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="240dp"
+        android:hint="@string/up_nombrep"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buscarcodigo" />
+
+    <EditText
+        android:id="@+id/editdpreciocompra"
+        android:layout_width="186dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/buscarcodigo"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="152dp"
+        android:hint="@string/up_preciocompra"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/butonbuscar"
+        app:layout_constraintTop_toBottomOf="@+id/editnombreproducto"
+        app:layout_constraintVertical_bias="0.222" />
+
+    <Button
+        android:id="@+id/btnupdate"
+        android:layout_width="210dp"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="32dp"
+        android:text="Actualizar producto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editstock"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editdprecioventa"
+        android:layout_width="190dp"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/buscarcodigo"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="156dp"
+        android:hint="@string/up_precioventa"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editdpreciocompra"
+        app:layout_constraintTop_toBottomOf="@+id/editdetallesproducto"
+        app:layout_constraintVertical_bias="0.392" />
+
+    <EditText
+        android:id="@+id/editstock"
+        android:layout_width="186dp"
+        android:layout_height="52dp"
+        android:layout_alignBottom="@+id/buscarcodigo"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="104dp"
+        android:hint="@string/up_stock"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/Datos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buscarcodigo"
+        android:layout_marginBottom="396dp"
+        android:text=" "
+        android:textSize="24sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
