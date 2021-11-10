@@ -76,7 +76,7 @@
     <string name="menu_proveedor">Buscar un Proveedor</string>
     <string name="menu_otros">Otros</string>
     <string name="scan_titulo">Scanear Código de barras</string>
-    <string name="scan_btn">Activar Scanner</string>
+    <string name="scan_btn">Activar Escaner</string>
     <string name="scan_instruccion">Presione el boton para activar el scanner</string>
     <string name="scan_txtview">El codígo escaneado se mostrará aqui</string>
     <string name="map_btn">Abrir Google Maps</string>
