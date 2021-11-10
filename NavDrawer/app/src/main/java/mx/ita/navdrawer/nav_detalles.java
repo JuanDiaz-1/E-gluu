@@ -40,14 +40,33 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 public class nav_detalles extends Fragment {
     TextView text;
-    EditText codigo;
-    Button btn;
+    EditText codigo,edn,edd,eds,edpc,edpv;
+    Button btn,botonupdate;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     Producto productoencontrado;
+    String id;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -94,34 +113,76 @@ public class nav_detalles extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_nav_detalles, container, false);
-
         codigo=root.findViewById(R.id.buscarcodigo);
         btn=root.findViewById(R.id.butonbuscar);
         text=root.findViewById(R.id.Datos);
         inicializarfirebase();
-        String id=codigo.getText().toString();
-
+        edn=root.findViewById(R.id.editnombreproducto);
+        edd=root.findViewById(R.id.editdetallesproducto);
+        eds=root.findViewById(R.id.editstock);
+        edpc=root.findViewById(R.id.editdpreciocompra);
+        edpv=root.findViewById(R.id.editdprecioventa);
+        botonupdate=root.findViewById(R.id.btnupdate);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                databaseReference.child("Producto").child(id).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                databaseReference.child("Producto").addValueEventListener(new ValueEventListener() {
                     @Override
-                    public void onComplete(@NonNull Task<DataSnapshot> task) {
-                        if(!task.isSuccessful()){
-                            text.setText("ERROR");
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        String id=codigo.getText().toString();
+                        for(DataSnapshot objSnapshot : snapshot.getChildren()) {
+                            Producto p = objSnapshot.getValue(Producto.class);
+                            String idn=objSnapshot.child("codigoprodcuto").getValue(String.class);
+                            if(id.equals(idn)){
+
+                                edn.setText(p.getNombreproducto());
+                                edd.setText(p.getDetallesproducto());
+                                eds.setText(p.getStock());
+                                edpc.setText(p.getPreciocompra());
+                                edpv.setText(p.getPrecioventa());
+                            }
                         }
-                        else{
-                            String variable=String.valueOf(task.getResult().getValue());
-                            text.setText(variable);
-                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
                     }
                 });
             }
         });
 
+        botonupdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String nombre=edn.getText().toString();
+                String detalles=edd.getText().toString();
+                String stoc=eds.getText().toString();
+                String precioc=edpc.getText().toString();
+                String preciov=edpv.getText().toString();
+                if(nombre.equals("") || detalles.equals("") || stoc.equals("") || precioc.equals("") || preciov.equals("")){
+                    validacion();
+                }else{
+                    String id=codigo.getText().toString();
+                    Producto p=new Producto();
+                    p.setCodigoprodcuto(id);
+                    p.setNombreproducto(nombre);
+                    p.setDetallesproducto(detalles);
+                    p.setStock(stoc);
+                    p.setPreciocompra(precioc);
+                    p.setPrecioventa(preciov);
+                    databaseReference.child("Producto").child(p.getCodigoprodcuto()).setValue(p);
 
 
-        return root;
+                }
+            }
+        });
+
+
+
+
+                return root;
     }
         private void inicializarfirebase(){
             FirebaseApp.initializeApp(getActivity());
@@ -129,4 +190,36 @@ public class nav_detalles extends Fragment {
             //firebaseDatabase.setPersistenceEnabled(true);
             databaseReference= firebaseDatabase.getReference();
         }
+
+    private void validacion() {
+        String nombre=edn.getText().toString();
+        String detalles=edd.getText().toString();
+        String stoc=eds.getText().toString();
+        String precioc=edpc.getText().toString();
+        String preciov=edpv.getText().toString();
+        if(nombre.equals("")){
+            edn.setError("Required");
+        }
+        if(detalles.equals("")){
+            edd.setError("Required");
+        }
+        if(stoc.equals("")){
+            eds.setError("Required");
+        }
+        if(precioc.equals("")){
+            edpc.setError("Required");
+        }
+        if(preciov.equals("")){
+            edpv.setError("Required");
+        }
     }
+    private void limpiarcajas(){
+        codigo.setText("");
+        edn.setText("");
+        edd.setText("");
+        eds.setText("");
+        edpc.setText("");
+        edpv.setText("");
+    }
+    }
+
