@@ -61,7 +61,7 @@ public class SlideshowFragment extends Fragment {
                                 Toast.makeText(getContext(),"Eliminado",Toast.LENGTH_LONG).show();
                             }
                             else{
-                                Toast.makeText(getContext(), "No encontrado", Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(getContext(), "No encontrado", Toast.LENGTH_SHORT).show();
                             }
                         }
                     }

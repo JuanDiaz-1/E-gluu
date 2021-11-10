@@ -50,4 +50,9 @@
         android:name="mx.ita.navdrawer.nav_detalles"
         android:label="fragment_nav_detalles"
         tools:layout="@layout/fragment_nav_detalles" />
+    <fragment
+        android:id="@+id/nav_terminos"
+        android:name="mx.ita.navdrawer.nav_terminos"
+        android:label="fragment_nav_terminos"
+        tools:layout="@layout/fragment_nav_terminos" />
 </navigation>

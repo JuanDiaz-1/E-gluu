@@ -13,10 +13,6 @@
             android:icon="@drawable/ic_detalles"
             android:title="Mostrar Detalles" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_editar_producto"
-            android:title="@string/menu_gallery" />
-        <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_eliminar_producto"
             android:title="@string/menu_slideshow" />
@@ -30,11 +26,21 @@
         <item
             android:id="@+id/nav_qr"
             android:icon="@drawable/ic_escaner_qr"
-            android:title="Escanear código QR" />
+            android:title="Escanear código" />
         <item
             android:id="@+id/nav_map2"
             android:icon="@drawable/ic_mapa_proveedores"
             android:title="Buscar un Proveedor" />
+
     </menu>
 </item>
+    <item android:title="Otros">
+        <menu>
+            <item
+                android:id="@+id/nav_terminos"
+                android:icon="@drawable/ic_detalles"
+                android:title="Términos y condiciones" />
+
+        </menu>
+    </item>
 </menu>
