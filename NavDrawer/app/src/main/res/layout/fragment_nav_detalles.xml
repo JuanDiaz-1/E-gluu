@@ -8,81 +8,113 @@
 
     <EditText
         android:id="@+id/buscarcodigo"
-        android:layout_width="match_parent"
+        android:layout_width="261dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="93dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="527dp"
         android:ems="10"
-        android:hint="Ingresa codigo del producto"
+        android:hint="@string/det_codigo"
         android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/editnombreproducto"
-        android:layout_width="match_parent"
+        android:layout_width="261dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/buscarcodigo"
-        android:layout_marginBottom="343dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="140dp"
         android:hint="@string/up_nombrep"
         android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/editdetallesproducto"
-        android:layout_width="match_parent"
+        android:layout_width="261dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/buscarcodigo"
-        android:layout_marginBottom="335dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="201dp"
         android:hint="@string/up_detallepro"
         android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/editdpreciocompra"
-        android:layout_width="match_parent"
+        android:layout_width="261dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/buscarcodigo"
-        android:layout_marginBottom="287dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="257dp"
         android:hint="@string/up_preciocompra"
         android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/editdprecioventa"
-        android:layout_width="match_parent"
+        android:layout_width="261dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/buscarcodigo"
-        android:layout_marginBottom="242dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="311dp"
         android:hint="@string/up_precioventa"
         android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/editstock"
-        android:layout_width="match_parent"
+        android:layout_width="261dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/buscarcodigo"
-        android:layout_marginBottom="183dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="366dp"
         android:hint="@string/up_stock"
         android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/btnupdate"
-        android:layout_width="match_parent"
+        android:layout_width="261dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="219dp"
-        android:text="Actualizar producto" />
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="76dp"
+        android:text="@string/det_actualiza" />
 
     <Button
         android:id="@+id/butonbuscar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="44dp"
-        android:text="Buscar" />
+        android:layout_marginStart="82dp"
+        android:layout_marginEnd="86dp"
+        android:layout_marginBottom="451dp"
+        android:text="@string/det_busca" />
 
     <TextView
         android:id="@+id/Datos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/buscarcodigo"
-        android:layout_marginBottom="396dp"
+        android:layout_marginBottom="428dp"
         android:text=""
         android:textSize="24sp" />
 

@@ -11,7 +11,7 @@
         <item
             android:id="@+id/nav_detalles"
             android:icon="@drawable/ic_detalles"
-            android:title="Mostrar Detalles" />
+            android:title="@string/menu_buscar" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_eliminar_producto"
@@ -19,27 +19,27 @@
         <item
             android:id="@+id/nav_listp"
             android:icon="@drawable/ic_lista"
-            android:title="Lista de Productos" />
+            android:title="@string/menu_listap" />
     </group>
-    <item android:title="Opciones adicionales">
+    <item android:title="@string/menu_opciones">
     <menu>
         <item
             android:id="@+id/nav_qr"
             android:icon="@drawable/ic_escaner_qr"
-            android:title="Escanear código" />
+            android:title="@string/menu_scanner" />
         <item
             android:id="@+id/nav_map2"
             android:icon="@drawable/ic_mapa_proveedores"
-            android:title="Buscar un Proveedor" />
+            android:title="@string/menu_proveedor" />
 
     </menu>
 </item>
-    <item android:title="Otros">
+    <item android:title="@string/menu_otros">
         <menu>
             <item
                 android:id="@+id/nav_terminos"
                 android:icon="@drawable/ic_detalles"
-                android:title="Términos y condiciones" />
+                android:title="@string/menu_terminos" />
 
         </menu>
     </item>
