@@ -36,5 +36,20 @@
             android:icon="@drawable/ic_mapa_proveedores"
             android:title="Buscar un Proveedor" />
     </menu>
+
 </item>
+
+    <item android:title="Otros">
+        <menu>
+            <item
+                android:id="@+id/fragment_nav_terminos"
+                android:icon="@drawable/ic_detalles"
+                android:title="Términos y condiciones" />
+
+        </menu>
+
+    </item>
+
+
+
 </menu>
