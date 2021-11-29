@@ -1,5 +1,6 @@
 package mx.ita.navdrawer.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +16,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 import androidx.annotation.Nullable;
 
 import com.google.firebase.FirebaseApp;
@@ -36,6 +38,8 @@ import mx.ita.navdrawer.R;
 public class HomeFragment extends Fragment {
     EditText codigoproducto,nombreproducto,detallesproducto,stock,preciocompra,precioventa;
     Button botonagregar;
+    Button btScan;
+
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -45,7 +49,12 @@ public class HomeFragment extends Fragment {
     private ListView mListView;
     private EditText mEditText;
     private List<String> mLista = new ArrayList<>();
-
+    public static HomeFragment newInstance(String param1, String param2) {
+        HomeFragment fragment = new HomeFragment();
+        Bundle args = new Bundle();
+        fragment.setArguments(args);
+        return fragment;
+    }
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -60,6 +69,14 @@ public class HomeFragment extends Fragment {
         stock=root.findViewById(R.id.StockProducto);
         preciocompra=root.findViewById(R.id.PrecioCompra);
         precioventa=root.findViewById(R.id.PrecioVenta);
+
+        btScan = root.findViewById(R.id.bt_Scan);
+        btScan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                escanear();
+            }
+        });
 
         inicializarfirebase();
 
@@ -134,6 +151,31 @@ public class HomeFragment extends Fragment {
         stock.setText("");
         preciocompra.setText("");
         precioventa.setText("");
+    }
+    public void escanear() {
+
+        IntentIntegrator intent = IntentIntegrator.forSupportFragment(HomeFragment.this);
+        //IntentIntegrator intent = new IntentIntegrator(getActivity());
+        intent.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES);
+        intent.setPrompt("ESCANEAR CODIGO");
+        intent.setCameraId(0);
+        intent.setBeepEnabled(false);
+        intent.setBarcodeImageEnabled(false);
+        intent.initiateScan();
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+
+        if(result != null) {
+            if(result.getContents() == null) {
+                Toast.makeText(getContext(), "Cancelaste el escaneo", Toast.LENGTH_SHORT).show();
+            } else {
+                codigoproducto.setText(result.getContents().toString());
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 
 }
