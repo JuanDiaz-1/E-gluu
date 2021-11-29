@@ -1,5 +1,6 @@
 package mx.ita.navdrawer.ui.slideshow;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -29,12 +31,13 @@ import androidx.lifecycle.ViewModelProvider;
 
 import mx.ita.navdrawer.Producto;
 import mx.ita.navdrawer.R;
+import mx.ita.navdrawer.nav_detalles;
 
 public class SlideshowFragment extends Fragment {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     EditText edtce;
-    Button btneliminar;
+    Button btneliminar,btscaner;
 
     private SlideshowViewModel slideshowViewModel;
 
@@ -46,6 +49,13 @@ public class SlideshowFragment extends Fragment {
         edtce=root.findViewById(R.id.edce);
         btneliminar=root.findViewById(R.id.btnep);
         inicializarfirebase();
+        btscaner=root.findViewById(R.id.btn_bar);
+        btscaner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                escanear();
+            }
+        });
         btneliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,5 +90,30 @@ public class SlideshowFragment extends Fragment {
         firebaseDatabase= FirebaseDatabase.getInstance();
         //firebaseDatabase.setPersistenceEnabled(true);
         databaseReference= firebaseDatabase.getReference();
+    }
+    public void escanear() {
+
+        IntentIntegrator intent = IntentIntegrator.forSupportFragment(SlideshowFragment.this);
+        //IntentIntegrator intent = new IntentIntegrator(getActivity());
+        intent.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES);
+        intent.setPrompt("ESCANEAR CODIGO");
+        intent.setCameraId(0);
+        intent.setBeepEnabled(false);
+        intent.setBarcodeImageEnabled(false);
+        intent.initiateScan();
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+
+        if(result != null) {
+            if(result.getContents() == null) {
+                Toast.makeText(getContext(), "Cancelaste el escaneo", Toast.LENGTH_SHORT).show();
+            } else {
+                edtce.setText(result.getContents().toString());
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 }
