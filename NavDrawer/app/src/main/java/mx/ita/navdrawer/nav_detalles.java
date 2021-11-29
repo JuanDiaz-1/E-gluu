@@ -1,5 +1,6 @@
 package mx.ita.navdrawer;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -46,6 +47,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -58,10 +60,15 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
+
+import mx.ita.navdrawer.ui.home.HomeFragment;
+
 public class nav_detalles extends Fragment {
     TextView text;
     EditText codigo,edn,edd,eds,edpc,edpv;
-    Button btn,botonupdate;
+    Button btn,botonupdate,btscaner;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     Producto productoencontrado;
@@ -122,6 +129,15 @@ public class nav_detalles extends Fragment {
         eds=root.findViewById(R.id.editstock);
         edpc=root.findViewById(R.id.editdpreciocompra);
         edpv=root.findViewById(R.id.editdprecioventa);
+        btscaner=root.findViewById(R.id.bt_Scan);
+        btscaner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                escanear();
+            }
+        });
+
+
         botonupdate=root.findViewById(R.id.btnupdate);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -220,6 +236,31 @@ public class nav_detalles extends Fragment {
         eds.setText("");
         edpc.setText("");
         edpv.setText("");
+    }
+    public void escanear() {
+
+        IntentIntegrator intent = IntentIntegrator.forSupportFragment(nav_detalles.this);
+        //IntentIntegrator intent = new IntentIntegrator(getActivity());
+        intent.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES);
+        intent.setPrompt("ESCANEAR CODIGO");
+        intent.setCameraId(0);
+        intent.setBeepEnabled(false);
+        intent.setBarcodeImageEnabled(false);
+        intent.initiateScan();
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+
+        if(result != null) {
+            if(result.getContents() == null) {
+                Toast.makeText(getContext(), "Cancelaste el escaneo", Toast.LENGTH_SHORT).show();
+            } else {
+                codigo.setText(result.getContents().toString());
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
     }
 

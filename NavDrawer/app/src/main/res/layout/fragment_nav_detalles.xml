@@ -27,9 +27,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="74dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="97dp"
         android:hint="@string/up_nombrep"
         android:inputType="textPersonName" />
 
@@ -40,9 +40,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="72dp"
-        android:layout_marginEnd="78dp"
-        android:layout_marginBottom="201dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="159dp"
         android:hint="@string/up_detallepro"
         android:inputType="textPersonName" />
 
@@ -55,7 +55,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="70dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginBottom="257dp"
+        android:layout_marginBottom="218dp"
         android:hint="@string/up_preciocompra"
         android:inputType="textPersonName" />
 
@@ -66,9 +66,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="311dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="271dp"
         android:hint="@string/up_precioventa"
         android:inputType="textPersonName" />
 
@@ -81,7 +81,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="70dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginBottom="366dp"
+        android:layout_marginBottom="327dp"
         android:hint="@string/up_stock"
         android:inputType="textPersonName" />
 
@@ -94,7 +94,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="70dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="34dp"
         android:text="@string/det_actualiza" />
 
     <Button
@@ -104,9 +104,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="82dp"
-        android:layout_marginEnd="86dp"
-        android:layout_marginBottom="451dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="389dp"
         android:text="@string/det_busca" />
 
     <TextView
@@ -117,5 +117,17 @@
         android:layout_marginBottom="428dp"
         android:text=""
         android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/bt_Scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/butonbuscar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="122dp"
+        android:layout_marginBottom="29dp"
+        android:text="@string/scan_btn"
+        tools:ignore="MissingConstraints" />
 
 </RelativeLayout>
