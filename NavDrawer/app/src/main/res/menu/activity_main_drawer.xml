@@ -41,6 +41,11 @@
                 android:icon="@drawable/ic_detalles"
                 android:title="@string/menu_terminos" />
 
+            <item
+                android:id="@+id/contacto"
+                android:icon="@drawable/ic_chat"
+                android:title="@string/contacto" />
+
         </menu>
     </item>
 </menu>

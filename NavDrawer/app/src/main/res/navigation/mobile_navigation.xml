@@ -57,4 +57,9 @@
         android:name="mx.ita.navdrawer.nav_terminos"
         android:label="@string/menu_terminos"
         tools:layout="@layout/fragment_nav_terminos" />
+    <fragment
+        android:id="@+id/contacto"
+        android:name="mx.ita.navdrawer.Contacto"
+        android:label="fragment_contacto"
+        tools:layout="@layout/fragment_contacto" />
 </navigation>

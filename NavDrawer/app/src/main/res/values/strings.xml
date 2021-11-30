@@ -49,7 +49,9 @@
     <string name="preciocompa">Precio Compra:</string>
     <string name="precioventa">Precio Venta:</string>
     <string name="agregar">AGREGAR</string>
-
+    <string name="redestitulo">¡Cualquier pregunta o duda contactanos! Nuestras redes sociales estan abiertas</string>
+    <string name="fbpage">Página de Facebook</string>
+    <string name="contacto">Contactanos</string>
     <!-- Strings Eliminar-->
     <string name="appeliminar">Eliminar Producto</string>
     <string name="detalleselimnar">"Presione el boton para escanear el codigo de barras del producto "</string>
