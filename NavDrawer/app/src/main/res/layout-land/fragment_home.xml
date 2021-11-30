@@ -34,8 +34,9 @@
        android:layout_width="363dp"
        android:layout_height="46dp"
        android:layout_marginStart="8dp"
+       android:layout_marginTop="4dp"
        android:layout_marginEnd="32dp"
-       android:layout_marginBottom="24dp"
+       android:layout_marginBottom="120dp"
        android:ems="10"
        android:gravity="center_horizontal"
        android:hint="@string/codigo"
@@ -45,8 +46,9 @@
        android:textAlignment="center"
        app:layout_constraintBottom_toTopOf="@+id/buttonAgregar"
        app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintHorizontal_bias="0.571"
-       app:layout_constraintStart_toEndOf="@+id/Detallesproducto" />
+       app:layout_constraintHorizontal_bias="0.265"
+       app:layout_constraintStart_toEndOf="@+id/Detallesproducto"
+       app:layout_constraintTop_toBottomOf="@+id/appBar" />
 
    <EditText
        android:id="@+id/NombreProducto"
@@ -135,14 +137,38 @@
 
    <Button
        android:id="@+id/buttonAgregar"
-       android:layout_width="362dp"
-       android:layout_height="48dp"
-       android:layout_marginEnd="52dp"
-       android:layout_marginBottom="64dp"
+       android:layout_width="167dp"
+       android:layout_height="68dp"
+       android:layout_marginBottom="36dp"
        android:text="@string/agregar"
        app:backgroundTint="#7D858E"
+       app:icon="@drawable/ic_agregar_producto"
        app:layout_constraintBottom_toBottomOf="parent"
-       app:layout_constraintEnd_toEndOf="parent" />
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.709"
+       app:layout_constraintStart_toStartOf="parent" />
+
+   <Button
+       android:id="@+id/bt_Scan"
+       android:layout_width="167dp"
+       android:layout_height="68dp"
+       android:text="@string/scan_btn"
+       app:icon="@drawable/ic_baseline_camera_alt_24"
+       app:layout_constraintBottom_toTopOf="@+id/buttonAgregar"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.708"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/CodigoProducto"
+       tools:ignore="MissingConstraints" />
+
+   <ImageView
+       android:id="@+id/imageView7"
+       android:layout_width="43dp"
+       android:layout_height="46dp"
+       android:layout_marginTop="4dp"
+       android:src="@drawable/ic_barcoder"
+       app:layout_constraintStart_toEndOf="@+id/CodigoProducto"
+       app:layout_constraintTop_toBottomOf="@+id/appBar" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

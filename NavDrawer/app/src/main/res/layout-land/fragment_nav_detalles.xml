@@ -22,16 +22,17 @@
 
     <Button
         android:id="@+id/butonbuscar"
-        android:layout_width="172dp"
-        android:layout_height="41dp"
+        android:layout_width="207dp"
+        android:layout_height="46dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="8dp"
         android:layout_marginBottom="16dp"
         android:text="@string/det_busca"
+        app:icon="@drawable/ic_lupa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buscarcodigo"
-        app:layout_constraintVertical_bias="0.127" />
+        app:layout_constraintVertical_bias="0.372" />
 
     <EditText
         android:id="@+id/editdetallesproducto"
@@ -64,7 +65,7 @@
         android:layout_width="186dp"
         android:layout_height="50dp"
         android:layout_alignBottom="@+id/buscarcodigo"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="152dp"
         android:hint="@string/up_preciocompra"
@@ -72,17 +73,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/butonbuscar"
         app:layout_constraintTop_toBottomOf="@+id/editnombreproducto"
-        app:layout_constraintVertical_bias="0.222" />
+        app:layout_constraintVertical_bias="0.304" />
 
     <Button
         android:id="@+id/btnupdate"
-        android:layout_width="210dp"
-        android:layout_height="49dp"
+        android:layout_width="224dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="76dp"
         android:layout_marginBottom="32dp"
         android:text="@string/det_actualiza"
+        app:icon="@drawable/ic_editar_producto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editstock"
@@ -125,5 +127,34 @@
         android:layout_marginBottom="396dp"
         android:text=" "
         android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/bt_Scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/butonbuscar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="168dp"
+        android:text="@string/scan_btn"
+        app:icon="@drawable/ic_baseline_camera_alt_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/butonbuscar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buscarcodigo"
+        app:layout_constraintVertical_bias="0.333"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:text="Button"
+        app:backgroundTint="#61D6D6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editdpreciocompra"
+        app:layout_constraintStart_toEndOf="@+id/butonbuscar"
+        app:layout_constraintTop_toBottomOf="@+id/Datos"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

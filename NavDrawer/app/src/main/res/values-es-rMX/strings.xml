@@ -45,7 +45,7 @@
     <string name="det_codigo">Ingresa codigo del producto</string>
     <string name="det_actualiza">Actualizar producto</string>
     <string name="det_busca">Buscar</string>
-    <string name="del_txtview">ingresa codigo a eliminar</string>
+    <string name="del_txtview">Ingresa codigo a eliminar</string>
     <string name="del_btnelim">Eliminar</string>
     <string name="del_hintcode">Código</string>
     <string name="menu_buscar">Buscar Producto</string>
