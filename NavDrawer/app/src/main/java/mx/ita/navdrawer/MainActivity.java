@@ -3,10 +3,12 @@ package mx.ita.navdrawer;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
@@ -73,11 +75,20 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,Login.class));
                 finish();
                 return true;
+
+            case R.id.acercade:
+                startActivity(new Intent(MainActivity.this,Acercade.class));
+                break;
+
+            case R.id.idioma:
+                startActivity(new Intent(Settings.ACTION_LOCALE_SETTINGS));
+                break;
             default:
                 // Do nothing
         }
         return super.onOptionsItemSelected(item);
     }
+
 
 
 }

@@ -2,9 +2,25 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
+
+    <item
+        android:id="@+id/acercade"
+        android:orderInCategory="10"
+        android:title="@string/acercade"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_info"
+
+        />
+
     <item android:id="@+id/out"
         android:title="@string/cerrarsesion"
-        android:orderInCategory="1"
+        android:orderInCategory="2"
         />
+
+    <item android:id="@+id/idioma"
+    android:title="@string/idioma"
+    android:orderInCategory="1"
+    />
 
 </menu>
