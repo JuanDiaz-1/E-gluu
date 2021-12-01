@@ -13,15 +13,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.923"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
         app:srcCompat="@drawable/logoegluu" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="207dp"
         android:layout_height="31dp"
-        android:text="Sobre nosotros"
+        android:text="@string/Sobrenosotros"
         android:textAlignment="center"
         android:textColor="#CD000000"
         android:textSize="20sp"
@@ -37,7 +36,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="Equipo 3"
+        android:text="@string/equipo3"
+        android:textColor="#307E8C"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.218"
@@ -108,13 +109,11 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginTop="12dp"
         android:text="* Vivero Guzmán Viviana"
-        app:layout_constraintBottom_toTopOf="@+id/imageView11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.968" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
