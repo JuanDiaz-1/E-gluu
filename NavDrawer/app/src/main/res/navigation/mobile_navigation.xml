@@ -60,6 +60,6 @@
     <fragment
         android:id="@+id/contacto"
         android:name="mx.ita.navdrawer.Contacto"
-        android:label="fragment_contacto"
+        android:label="@string/contactanos"
         tools:layout="@layout/fragment_contacto" />
 </navigation>
