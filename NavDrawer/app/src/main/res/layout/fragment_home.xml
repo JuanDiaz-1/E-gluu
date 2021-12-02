@@ -93,7 +93,8 @@
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintHorizontal_bias="0.5"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/Detallesproducto" />
+       app:layout_constraintTop_toBottomOf="@+id/Detallesproducto"
+       android:drawableStart="@drawable/ic_stock"/>
 
    <EditText
        android:id="@+id/PrecioCompra"
@@ -109,7 +110,8 @@
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintHorizontal_bias="0.5"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/StockProducto" />
+       app:layout_constraintTop_toBottomOf="@+id/StockProducto"
+       android:drawableStart="@drawable/ic_precio"/>
 
    <EditText
        android:id="@+id/PrecioVenta"
@@ -125,7 +127,8 @@
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintHorizontal_bias="0.454"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/PrecioCompra" />
+       app:layout_constraintTop_toBottomOf="@+id/PrecioCompra"
+       android:drawableStart="@drawable/ic_precio"/>
 
    <Button
        android:id="@+id/buttonAgregar"
@@ -158,8 +161,9 @@
        android:id="@+id/imageView2"
        android:layout_width="51dp"
        android:layout_height="46dp"
+       android:layout_marginEnd="284dp"
        android:src="@drawable/ic_barcoder"
-       app:layout_constraintStart_toEndOf="@+id/CodigoProducto"
+       app:layout_constraintEnd_toEndOf="@+id/CodigoProducto"
        tools:layout_editor_absoluteY="56dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
