@@ -90,4 +90,12 @@
     <string name="Sobrenosotros">Sobre nosotros</string>
     <string name="equipo3">Equipo 3</string>
     <string name="contactanos">Contactanos</string>
+    <string name="howto">Ayuda</string>
+    <string name="bienvenida">Te damos la bienvenida!!</string>
+    <string name="tituloohowto2">Comencemos!!</string>
+    <string name="texthowto">Con esta aplicación usted podrá llevar un registro de su inventario a través de un lector de codigo de barras que le permitirá registrar sus productos en una base de datos en tiempo real, incluso si no cuenta con conexión a internet.</string>
+    <string name="texthowto2">Al iniciar la aplicación podrás ver una lista de los productos que han sido registrados en nuestra base de datos.</string>
+    <string name="texthowto3">Podras abrir el menu de esquina superior izquierda en el cual se encuentra una variedad de opciones para manejar su inventario.</string>
+    <string name="texthowto4">Por otra parte el menú de la esquina superior derecha mostrará las opciones de cambio de idioma, ayuda y cerrar sesión.</string>
+    <string name="texthowto5">Gracias por descargar nuestra aplicación, esperamos que sea de tu agrado!!</string>
 </resources>

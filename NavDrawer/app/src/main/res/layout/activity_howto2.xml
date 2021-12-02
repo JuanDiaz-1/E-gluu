@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Howto2"
+    android:background="#0298B3">
+
+    <ImageButton
+        android:background="#0298B3"
+        android:id="@+id/imageButtonrightarrow2"
+        android:layout_width="95dp"
+        android:layout_height="86dp"
+        android:layout_marginLeft="2sp"
+        android:layout_marginTop="0sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginBottom="5sp"
+        android:adjustViewBounds="true"
+        android:onClick="onClick"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.982"
+        app:srcCompat="@drawable/ic_arrow_right" />
+
+
+    <ImageButton
+        android:onClick="onClick"
+        android:id="@+id/imageButtonleftarrow2"
+        android:layout_width="101dp"
+        android:layout_height="86dp"
+        android:layout_marginEnd="176dp"
+        android:adjustViewBounds="true"
+        android:background="#0298B3"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonrightarrow2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97"
+        app:srcCompat="@drawable/ic_left_arrow" />
+
+    <ImageButton
+        android:onClick="onClick"
+        android:id="@+id/imageButtoncancel2"
+        android:layout_width="87dp"
+        android:layout_height="93dp"
+        android:adjustViewBounds="true"
+        android:background="#0298B3"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.031"
+        app:srcCompat="@drawable/ic_cancel" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="184dp"
+        android:layout_height="33dp"
+        android:text="@string/tituloohowto2"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.131" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="198dp"
+        android:layout_height="174dp"
+        android:text="@string/texthowto2"
+        android:textColor="#FFFFFF"
+        android:textSize="20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="78dp"
+        android:layout_height="84dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView15"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.078"
+        app:srcCompat="@drawable/cohete" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="152dp"
+        android:layout_height="317dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.545"
+        app:srcCompat="@drawable/pantallainicio" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

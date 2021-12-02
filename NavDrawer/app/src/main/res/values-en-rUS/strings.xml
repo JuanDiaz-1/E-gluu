@@ -67,4 +67,14 @@
     <string name="Sobrenosotros">About Us</string>
     <string name="equipo3">Team 3</string>
     <string name="contactanos">Contact Us</string>
+    <string name="idioma">Language</string>
+    <string name="acercade">About Us</string>
+    <string name="bienvenida">Welcome!!</string>
+    <string name="howto">Help</string>
+    <string name="tituloohowto2">Let\'s start</string>
+    <string name="texthowto">With this application you will be able to keep track of your inventory through a barcode reader that will allow you to register your products in a database in real time, even if you do not have an internet connection.</string>
+    <string name="texthowto2">When you start the application you will see a list of the products that have been registered in our database.</string>
+    <string name="texthowto3">You will be able to open the menu in the upper left corner in which you will find a variety of options to manage your inventory.</string>
+    <string name="texthowto4">On the other hand, the menu in the upper right corner will show the options to change the language, help and log out.</string>
+    <string name="texthowto5">Thank you for downloading our application, we hope you like it !!</string>
 </resources>

@@ -80,6 +80,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,Acercade.class));
                 break;
 
+
+            case R.id.howto:
+                startActivity(new Intent(MainActivity.this,Howto.class));
+                break;
+
             case R.id.idioma:
                 startActivity(new Intent(Settings.ACTION_LOCALE_SETTINGS));
                 break;
