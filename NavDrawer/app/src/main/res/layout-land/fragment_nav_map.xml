@@ -17,7 +17,9 @@
         android:layout_marginStart="185dp"
         android:layout_marginEnd="197dp"
         android:layout_marginBottom="206dp"
-        android:text="@string/map_btn"></Button>
+        android:text="@string/map_btn"
+        app:icon="@drawable/ic_mapa_proveedores"
+        app:iconSize="20dp"></Button>
 
     <TextView
         android:id="@+id/txtmap"
@@ -29,7 +31,8 @@
         android:layout_marginStart="198dp"
         android:layout_marginEnd="202dp"
         android:layout_marginBottom="15dp"
-        android:text="@string/map_txtview" />
+        android:text="@string/map_txtview"
+        android:textColor="#03A9F4" />
 
     <ImageView
         android:id="@+id/imageView6"

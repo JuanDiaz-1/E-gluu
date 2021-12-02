@@ -73,7 +73,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/butonbuscar"
         app:layout_constraintTop_toBottomOf="@+id/editnombreproducto"
-        app:layout_constraintVertical_bias="0.304" />
+        app:layout_constraintVertical_bias="0.304"
+        android:drawableStart="@drawable/ic_precio"/>
 
     <Button
         android:id="@+id/btnupdate"
@@ -105,7 +106,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editdpreciocompra"
         app:layout_constraintTop_toBottomOf="@+id/editdetallesproducto"
-        app:layout_constraintVertical_bias="0.392" />
+        app:layout_constraintVertical_bias="0.392"
+        android:drawableStart="@drawable/ic_precio"/>
 
     <EditText
         android:id="@+id/editstock"
@@ -117,7 +119,8 @@
         android:hint="@string/up_stock"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:drawableStart="@drawable/ic_stock"/>
 
     <TextView
         android:id="@+id/Datos"

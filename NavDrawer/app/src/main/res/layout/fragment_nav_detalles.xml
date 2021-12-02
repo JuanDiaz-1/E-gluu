@@ -57,7 +57,8 @@
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="218dp"
         android:hint="@string/up_preciocompra"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:drawableStart="@drawable/ic_precio"/>
 
     <EditText
         android:id="@+id/editdprecioventa"
@@ -70,7 +71,8 @@
         android:layout_marginEnd="77dp"
         android:layout_marginBottom="271dp"
         android:hint="@string/up_precioventa"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:drawableStart="@drawable/ic_precio"/>
 
     <EditText
         android:id="@+id/editstock"
@@ -83,7 +85,8 @@
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="327dp"
         android:hint="@string/up_stock"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:drawableStart="@drawable/ic_stock"/>
 
     <Button
         android:id="@+id/btnupdate"
@@ -146,12 +149,10 @@
         android:id="@+id/imageView10"
         android:layout_width="60dp"
         android:layout_height="50dp"
-        android:layout_alignStart="@+id/buscarcodigo"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="260dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="527dp"
+        android:layout_alignEnd="@+id/buscarcodigo"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="262dp"
         android:src="@drawable/ic_barcoder" />
 
 </RelativeLayout>

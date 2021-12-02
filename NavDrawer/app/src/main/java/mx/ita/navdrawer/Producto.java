@@ -14,6 +14,7 @@ public class Producto {
     private String stock;
     private String preciocompra;
     private String precioventa;
+    private String nombrestock;
 
     public Producto() {
     }
@@ -67,6 +68,8 @@ public class Producto {
 
     @Override
     public String toString() {
-        return nombreproducto;
+        nombrestock="Nombre: "+nombreproducto+"\n Codigo de Barras: "+codigoprodcuto+"\n Unidades en existencia: "+stock+"\n Precio de proveedor: "+preciocompra+"$"+"\n Precio para cliente: "+precioventa+"$ \n";
+        return nombrestock;
+
     }
 }

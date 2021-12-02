@@ -14,12 +14,15 @@ import android.widget.Button;
 
 public class Contacto extends Fragment {
     Button face;
+    Button correo;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
          View view = inflater.inflate(R.layout.fragment_contacto, container, false);
         face = view.findViewById(R.id.btnFacebook);
+        correo = view.findViewById(R.id.btncorreo);
+        correo.setOnClickListener(this::onClick);
         face.setOnClickListener(this::onClick);
         return view;
     }
@@ -30,6 +33,11 @@ public class Contacto extends Fragment {
 
             case R.id.btnFacebook:
                 miIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/E-Gluu-108169505036731"));
+                break;
+            case R.id.btncorreo:
+                miIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/equipo3egluu/"));
+                break;
+
         }
         startActivity(miIntent);
     }
