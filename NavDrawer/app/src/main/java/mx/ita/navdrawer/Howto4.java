@@ -34,7 +34,6 @@ public class Howto4 extends AppCompatActivity {
                 startActivity(new Intent(Howto4.this,Howto3.class));
                 break;
 
-
             case R.id.imageButtoncancel4:
                 startActivity(new Intent(Howto4.this,MainActivity.class));
                 break;
