@@ -67,4 +67,6 @@
     <string name="Sobrenosotros">About Us</string>
     <string name="equipo3">Team 3</string>
     <string name="contactanos">Contact Us</string>
+    <string name="instapage">Instagram Page</string>
+    <string name="telefono">Send a WhatsApp message to the number:</string>
 </resources>

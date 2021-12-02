@@ -52,6 +52,9 @@
     <string name="redestitulo">¡Cualquier pregunta o duda contactanos! Nuestras redes sociales estan abiertas</string>
     <string name="fbpage">Página de Facebook</string>
     <string name="contacto">Contactanos</string>
+    <string name="instapage">Página de Instagram</string>
+    <string name="telefono">Envia un mensaje de WhatsApp al número: </string>
+    <string name="numerotele" translatable="false">4491383098</string>
     <!-- Strings Eliminar-->
     <string name="appeliminar">Eliminar Producto</string>
     <string name="detalleselimnar">"Presione el boton para escanear el codigo de barras del producto "</string>
